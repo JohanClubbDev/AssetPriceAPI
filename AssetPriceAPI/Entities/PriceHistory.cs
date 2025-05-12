@@ -13,8 +13,4 @@ public class PriceHistory
 
     public DateTime ValidFrom { get; set; }
     public DateTime? ValidTo { get; set; }
-
-    public DateTime LastUpdated { get; set; }
-
-    public Guid? OriginalPriceId { get; set; }
 }
