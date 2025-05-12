@@ -1,4 +1,5 @@
 ﻿using AssetPriceAPI.Data;
+using AssetPriceAPI.Mappings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +12,7 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite("Data Source=assetprice.db"));
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 // Add Swagger for API documentation
 builder.Services.AddEndpointsApiExplorer();
