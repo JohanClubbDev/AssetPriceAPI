@@ -11,5 +11,10 @@ public class MappingProfile : Profile
         // Asset mappings
         CreateMap<Asset, AssetReadDto>();
         CreateMap<AssetCreateDto, Asset>();
+        CreateMap<Price, PriceReadDto>()
+            .ForMember(dest => dest.AssetName, opt => opt.MapFrom(src => src.Asset.Name))
+            .ForMember(dest => dest.SourceName, opt => opt.MapFrom(src => src.Source.Name));
+
+        CreateMap<PriceCreateDto, Price>();
     }
 }
