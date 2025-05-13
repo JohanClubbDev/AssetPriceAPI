@@ -5,7 +5,7 @@ public class Price
     public Guid Id { get; set; }
 
     public Guid AssetId { get; set; }
-    public required Asset Asset { get; set; }
+    public Asset Asset { get; set; }
 
     public Guid SourceId { get; set; }
     public Source Source { get; set; } = null!;
