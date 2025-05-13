@@ -45,6 +45,8 @@ using (var scope = app.Services.CreateScope())
     dbContext.Database.Migrate();  // Apply any pending migrations
 }
 
+// Seed data on startup
+await app.SeedDatabaseAsync();
 
 // Configure the HTTP request pipeline.
 app.UseSwagger();
