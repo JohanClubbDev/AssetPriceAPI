@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace AssetPriceAPI.Controllers
 {
@@ -14,11 +15,13 @@ namespace AssetPriceAPI.Controllers
     {
         private readonly IPriceService _priceService;
         private readonly ILogger<PriceController> _logger;
+        private readonly IMapper _mapper;
 
-        public PriceController(IPriceService priceService, ILogger<PriceController> logger)
+        public PriceController(IPriceService priceService, IMapper mapper, ILogger<PriceController> logger)
         {
             _priceService = priceService;
             _logger = logger;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -48,12 +51,12 @@ namespace AssetPriceAPI.Controllers
         /// Get prices of one or more assets for a specific date, optionally from a specific source.
         /// </summary>
         [HttpGet]
-        public async Task<IActionResult> GetPrices([FromQuery] DateOnly date, [FromQuery] List<Guid> assetIds, [FromQuery] Guid? sourceId)
+        public async Task<ActionResult<List<PriceReadDto>>> GetPrices([FromQuery] DateOnly date, [FromQuery] List<Guid> assetIds, [FromQuery] Guid? sourceId)
         {
             try
             {
                 var prices = await _priceService.GetPricesAsync(assetIds, date, sourceId);
-                return Ok(prices);
+                return Ok(_mapper.Map<List<PriceReadDto>>(prices));
             }
             catch (Exception ex)
             {

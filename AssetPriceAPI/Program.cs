@@ -23,6 +23,8 @@ builder.Services.AddScoped<IAssetRepository, AssetRepository>();
 builder.Services.AddScoped<IAssetService, AssetService>();
 builder.Services.AddScoped<IPriceRepository, PriceRepository>();
 builder.Services.AddScoped<IPriceService, PriceService>();
+builder.Services.AddScoped<ISourceRepository, SourceRepository>();
+builder.Services.AddScoped<ISourceService, SourceService>();
 
 // Register AutoMapper
 builder.Services.AddAutoMapper(typeof(MappingProfile));

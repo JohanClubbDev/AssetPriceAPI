@@ -16,5 +16,7 @@ public class MappingProfile : Profile
             .ForMember(dest => dest.SourceName, opt => opt.MapFrom(src => src.Source.Name));
 
         CreateMap<PriceCreateDto, Price>();
+        CreateMap<SourceCreateDto, Source>();
+        CreateMap<Source, SourceReadDto>();
     }
 }
