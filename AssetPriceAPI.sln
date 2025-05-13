@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetPriceAPI", "AssetPriceAPI\AssetPriceAPI.csproj", "{D95FCC67-AFF2-4D7A-861F-B383198D7DB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetPriceAPI.tests", "AssetPriceAPI.tests\AssetPriceAPI.tests.csproj", "{80F20B30-60F5-46AC-AFCB-BB8238E0F222}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,9 +12,5 @@ Global
 		{D95FCC67-AFF2-4D7A-861F-B383198D7DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D95FCC67-AFF2-4D7A-861F-B383198D7DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D95FCC67-AFF2-4D7A-861F-B383198D7DB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{80F20B30-60F5-46AC-AFCB-BB8238E0F222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{80F20B30-60F5-46AC-AFCB-BB8238E0F222}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{80F20B30-60F5-46AC-AFCB-BB8238E0F222}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{80F20B30-60F5-46AC-AFCB-BB8238E0F222}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
