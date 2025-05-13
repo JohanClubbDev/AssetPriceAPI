@@ -30,11 +30,6 @@ namespace AssetPriceAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateOrUpdatePrice([FromBody] PriceCreateDto priceDto)
         {
-            if (priceDto == null)
-            {
-                return BadRequest(new { message = "Invalid price data." });
-            }
-
             try
             {
                 await _priceService.AddOrUpdatePriceAsync(priceDto.AssetId, priceDto.SourceId, priceDto.PriceDate, priceDto.PriceValue);
