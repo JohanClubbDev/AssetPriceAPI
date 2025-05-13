@@ -2,10 +2,6 @@
 
 ## Overview
 
-# Asset Price API - ReadMe
-
-## Overview
-
 This application provides an API to manage asset information and their price data. The system is designed to:
 - Store information about assets (e.g., stock data, commodities).
 - Track the price history of assets from various sources on a daily basis.
@@ -96,8 +92,8 @@ To run the application locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-repository/asset-price-api.git
-   cd asset-price-api
+   git clone https://github.com/JohanClubbDev/AssetPriceAPI.git
+   cd AssetPriceAPI
 2. **Restore dependencies**:
 
     Ensure you have the latest version of .NET SDK installed, then run:
